@@ -1,0 +1,12 @@
+{
+    "current_version": 20,
+    "dependencies": "clearblade,log",
+    "logging_enabled": "true",
+    "name": "setAssetPosition",
+    "params": [],
+    "permissions": {
+        "Administrator": 1
+    },
+    "run_user": "",
+    "source": "setAssetPosition.js"
+}
