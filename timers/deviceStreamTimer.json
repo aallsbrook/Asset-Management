@@ -1,0 +1,8 @@
+{
+    "description": "Invokes simulate_asset_stream service for each device every 5 seconds",
+    "frequency": 5,
+    "name": "deviceStreamTimer",
+    "repeats": -1,
+    "service_name": "deviceStreamTimer",
+    "start_time": "2018-02-03T00:00:04Z"
+}
