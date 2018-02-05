@@ -1,0 +1,9 @@
+{
+    "auth": true,
+    "description": "",
+    "messaging_url": "messaging.clearblade.com:1883",
+    "name": "AMD Asset Management",
+    "platform_url": "https://platform.clearblade.com",
+    "system_key": "f8e7d1a50bdc8681f8f09dc6b413",
+    "system_secret": "F8E7D1A50B92C098EABD9DB6B474"
+}
