@@ -1,0 +1,10 @@
+{
+    "current_version": 7,
+    "dependencies": "clearblade",
+    "logging_enabled": "false",
+    "name": "getAlerts",
+    "params": [],
+    "permissions": {},
+    "run_user": "",
+    "source": "getAlerts.js"
+}
