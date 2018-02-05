@@ -1,0 +1,123 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "8af5d1a50bb0f6b0deb7d580be3e",
+    "items": [
+        {
+            "address": "2100 Barton Springs Rd, Austin, TX 78704",
+            "altitude": null,
+            "floorplan_path": null,
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/37085-200.png",
+            "item_id": "324c2b02-02e0-43f7-b521-48eaf7b9cb46",
+            "label": "Zilker Metropolitan Park",
+            "latitude": "30.266962",
+            "longitude": "-97.772859",
+            "name": "zilker_metropolitan_park",
+            "shape": null
+        },
+        {
+            "address": "5601 W. 26th St. Cicero, IL  60632   USA",
+            "altitude": null,
+            "floorplan_path": null,
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/165116-200.png",
+            "item_id": "a844d341-58fe-46db-a887-a3158fda06c7",
+            "label": "Cicero Yards",
+            "latitude": "41.843325",
+            "longitude": "-87.764280",
+            "name": "cicero_yards",
+            "shape": null
+        },
+        {
+            "address": "285 Fulton St, New York, NY 10007",
+            "altitude": null,
+            "floorplan_path": null,
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/65999-200.png",
+            "item_id": "b4b606ee-714d-4f86-a84e-82dd2f8ca2a5",
+            "label": "One World Trade Center",
+            "latitude": "40.713008",
+            "longitude": "-74.013169",
+            "name": "one_world_trade_center",
+            "shape": null
+        },
+        {
+            "address": "103 E 5th St, Austin, TX",
+            "altitude": null,
+            "floorplan_path": null,
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/13872-200.png",
+            "item_id": "b9c5f326-29ba-428e-830b-f7e29b847f74",
+            "label": "ClearBlade",
+            "latitude": "30.26675",
+            "longitude": "-97.7446274",
+            "name": "clearblade",
+            "shape": null
+        },
+        {
+            "address": "1 Everbank Field Dr, Jacksonville, FL",
+            "altitude": null,
+            "floorplan_path": null,
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/13872-200.png",
+            "item_id": "f20932bf-b742-4d4b-bd38-a2831581a692",
+            "label": "Everbank Field",
+            "latitude": "30.323877",
+            "longitude": "-81.63733079",
+            "name": "everbank_field",
+            "shape": null
+        }
+    ],
+    "name": "locations",
+    "permissions": {
+        "Anonymous": 1,
+        "Authenticated": 1
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "name",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "address",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "icon_path",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "longitude",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "latitude",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "altitude",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "shape",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "floorplan_path",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "label",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
