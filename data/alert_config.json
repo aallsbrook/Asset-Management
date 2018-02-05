@@ -1,0 +1,56 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "dce1eba50bc2ebf7cd8684aa9c9e01",
+    "items": [
+        {
+            "actor": null,
+            "item_id": "5eaf7bbd-ae97-4f78-bee2-2f94eb03e8ea",
+            "name": "pump 42 broken",
+            "subactor": null,
+            "type": "asset_inactive"
+        },
+        {
+            "actor": null,
+            "item_id": "8b51584f-b90b-443d-81f9-4b2ac2c68c20",
+            "name": "pump 101 returned",
+            "subactor": null,
+            "type": "asset_returned"
+        },
+        {
+            "actor": null,
+            "item_id": "fdfff956-c0e9-46e8-b1da-8c3363115361",
+            "name": "pump 101 vibration alarm",
+            "subactor": null,
+            "type": "asset_violates_threshold"
+        }
+    ],
+    "name": "alert_config",
+    "permissions": {},
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "actor",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "type",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "subactor",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "name",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
