@@ -1,0 +1,14 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "def4d1a50bd6dcdbcbdfaaf8b414",
+    "items": [],
+    "name": "indoor_zones",
+    "permissions": {},
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        }
+    ]
+}
