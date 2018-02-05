@@ -1,0 +1,87 @@
+{
+    "Description": "Default role that is applied to all authenticated users",
+    "ID": "Authenticated",
+    "Name": "Authenticated",
+    "Permissions": {
+        "CodeServices": [
+            {
+                "Level": 1,
+                "Name": "getAlertTypes",
+                "SystemKey": "f8e7d1a50bdc8681f8f09dc6b413"
+            },
+            {
+                "Level": 1,
+                "Name": "getAssetTypes",
+                "SystemKey": "f8e7d1a50bdc8681f8f09dc6b413"
+            },
+            {
+                "Level": 1,
+                "Name": "getLocations",
+                "SystemKey": "f8e7d1a50bdc8681f8f09dc6b413"
+            },
+            {
+                "Level": 1,
+                "Name": "getSummaryStatistics",
+                "SystemKey": "f8e7d1a50bdc8681f8f09dc6b413"
+            }
+        ],
+        "Collections": [
+            {
+                "Columns": [],
+                "ID": "acbce9a50be886dbf5af958d9003",
+                "Items": [],
+                "Level": 1,
+                "Name": "alert_type"
+            },
+            {
+                "Columns": [],
+                "ID": "b0f5d1a50bf88b9de8baa7aefa56",
+                "Items": [],
+                "Level": 1,
+                "Name": "asset_schema"
+            },
+            {
+                "Columns": [],
+                "ID": "b6b2e9a50b9ce9aab09f958ce760",
+                "Items": [],
+                "Level": 1,
+                "Name": "b6b2e9a50b9ce9aab09f958ce760"
+            },
+            {
+                "Columns": [],
+                "ID": "8af5d1a50bb0f6b0deb7d580be3e",
+                "Items": [],
+                "Level": 1,
+                "Name": "locations"
+            },
+            {
+                "Columns": [],
+                "ID": "80b5e9a50b96b5af998f8a9dcef301",
+                "Items": [],
+                "Level": 1,
+                "Name": "user_type"
+            }
+        ],
+        "DevicesList": {
+            "Level": 5
+        },
+        "MsgHistory": {
+            "Level": 1
+        },
+        "Portals": [
+            {
+                "Level": 1,
+                "Name": "EAM",
+                "SystemKey": "f8e7d1a50bdc8681f8f09dc6b413"
+            }
+        ],
+        "Push": {
+            "Level": 0
+        },
+        "SystemServices": null,
+        "Topics": [],
+        "UsersList": {
+            "Level": 0
+        }
+    }
+}
