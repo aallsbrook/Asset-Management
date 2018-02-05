@@ -1,0 +1,10 @@
+{
+    "current_version": 3,
+    "dependencies": "clearblade,log",
+    "logging_enabled": "false",
+    "name": "edgeDeviceUpdate",
+    "params": [],
+    "permissions": {},
+    "run_user": "",
+    "source": "edgeDeviceUpdate.js"
+}
