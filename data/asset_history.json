@@ -1,0 +1,29 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "e4f5d1a50b9efea28d8cf793d771",
+    "items": [],
+    "name": "asset_history",
+    "permissions": {},
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "asset_id",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "asset_attribute",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "asset_value",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
