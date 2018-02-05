@@ -1,0 +1,10 @@
+{
+    "current_version": 1,
+    "dependencies": "",
+    "logging_enabled": "false",
+    "name": "createAlert",
+    "params": [],
+    "permissions": {},
+    "run_user": "",
+    "source": "createAlert.js"
+}
