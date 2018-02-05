@@ -1,0 +1,13 @@
+{
+    "current_version": 26,
+    "dependencies": "clearblade",
+    "logging_enabled": "false",
+    "name": "getAlertTypes",
+    "params": [],
+    "permissions": {
+        "Administrator": 1,
+        "Authenticated": 1
+    },
+    "run_user": "",
+    "source": "getAlertTypes.js"
+}
