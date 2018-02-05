@@ -1,0 +1,50 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "80b5e9a50b96b5af998f8a9dcef301",
+    "items": [
+        {
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/381023-200.png",
+            "item_id": "64c13267-67b4-42e6-b35e-f122e441d8fa",
+            "label": "Electrician",
+            "name": "electrician"
+        },
+        {
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/11064-200.png",
+            "item_id": "7d491b39-4370-4847-9228-9a1ff785e1c7",
+            "label": "Supervisor",
+            "name": "supervisor"
+        },
+        {
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/216065-200.png",
+            "item_id": "b1405e04-e661-40ff-b6da-efb9fffee3e5",
+            "label": "Engineer",
+            "name": "engineer"
+        }
+    ],
+    "name": "user_type",
+    "permissions": {
+        "Authenticated": 1
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "name",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "label",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "icon_path",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
