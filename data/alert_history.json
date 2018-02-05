@@ -1,0 +1,58 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "98ebeaa50bf6a386d88991f3df5d",
+    "items": [
+        {
+            "alert_config": "pump 42 broken",
+            "alert_timestamp": "2018-01-17T10:55:38Z",
+            "is_resolved": true,
+            "item_id": "5052541a-a666-4895-bc75-22d96876d654",
+            "status": "closed"
+        },
+        {
+            "alert_config": "pump 101 vibration alarm",
+            "alert_timestamp": "2018-01-17T10:55:38Z",
+            "is_resolved": false,
+            "item_id": "af8d18bc-a863-4f78-9b7f-40fd3730f371",
+            "status": "open"
+        },
+        {
+            "alert_config": "pump 101 returned",
+            "alert_timestamp": "2018-01-17T10:55:38Z",
+            "is_resolved": false,
+            "item_id": "fac949c7-b67a-4620-a661-ca33e755ca1a",
+            "status": "in_progress"
+        }
+    ],
+    "name": "alert_history",
+    "permissions": {
+        "Administrator": 1
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "alert_timestamp",
+            "ColumnType": "timestamp",
+            "PK": false
+        },
+        {
+            "ColumnName": "alert_config",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "is_resolved",
+            "ColumnType": "bool",
+            "PK": false
+        },
+        {
+            "ColumnName": "status",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
