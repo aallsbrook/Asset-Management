@@ -1,0 +1,18 @@
+{
+    "author": {
+        "email": "aallsbrook@clearblade.com"
+    },
+    "clouds": [],
+    "description": "",
+    "domains": [],
+    "gateways": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/ClearBlade_logo_square.png",
+    "keywords": [],
+    "license": "MIT",
+    "name": "AMD_Asset_Management",
+    "private": false,
+    "prog_lang": [],
+    "protocols": [],
+    "things": [],
+    "version": ".4"
+}
