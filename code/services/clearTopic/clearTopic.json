@@ -1,0 +1,12 @@
+{
+    "current_version": 8,
+    "dependencies": "clearblade",
+    "logging_enabled": "false",
+    "name": "clearTopic",
+    "params": [],
+    "permissions": {
+        "Administrator": 1
+    },
+    "run_user": "",
+    "source": "clearTopic.js"
+}
