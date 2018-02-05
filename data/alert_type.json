@@ -1,0 +1,192 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "acbce9a50be886dbf5af958d9003",
+    "items": [
+        {
+            "category": "position",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/18828-200.png",
+            "item_id": "0182fc98-0417-4279-a162-d5dfc6dea45c",
+            "label": "Asset entered zone",
+            "name": "asset_enter"
+        },
+        {
+            "category": "position",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/18828-200.png",
+            "item_id": "0bac6481-b38c-43f4-87d0-0f957710d576",
+            "label": "User entered zone",
+            "name": "user_enter"
+        },
+        {
+            "category": "issue",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/10890-200.png",
+            "item_id": "2744d8f6-7837-4a1f-b591-6e0d5c1112ea",
+            "label": "Asset within threshold",
+            "name": "asset_within_threshold"
+        },
+        {
+            "category": "activity",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/43038-200.png",
+            "item_id": "27523d9d-de4d-4879-af01-44a5ec21dd0a",
+            "label": "Asset taken",
+            "name": "asset_taken"
+        },
+        {
+            "category": "position",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/20738-200.png",
+            "item_id": "2a8d10eb-0cff-49f5-9ab1-fbf0367aacf7",
+            "label": "Asset exited zone",
+            "name": "asset_exit"
+        },
+        {
+            "category": "admin",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/43038-200.png",
+            "item_id": "3597d74c-a911-42be-ab33-9b09cdfde060",
+            "label": "Asset Removed",
+            "name": "asset_removed"
+        },
+        {
+            "category": "position",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/20738-200.png",
+            "item_id": "4f00dae8-f443-4831-a151-a8402da1a15b",
+            "label": "User exited zone",
+            "name": "user_exit"
+        },
+        {
+            "category": "admin",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/710799-200.png",
+            "item_id": "4fbc2c3c-4d1e-43bb-837f-bb63b3ec5abd",
+            "label": "User added",
+            "name": "user_created"
+        },
+        {
+            "category": "admin",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/43038-200.png",
+            "item_id": "70a07777-2571-4301-8184-86d4b5556732",
+            "label": "Asset Created",
+            "name": "asset_created"
+        },
+        {
+            "category": "issue",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/10890-200.png",
+            "item_id": "757d543f-2f03-443c-a83d-67e7c185ecce",
+            "label": "Asset assign an issue",
+            "name": "asset_issue_assigned"
+        },
+        {
+            "category": "issue",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/24079-200.png",
+            "item_id": "7ca6f81f-963c-47fa-b7a2-5f18b24edfe7",
+            "label": "Asset Comment",
+            "name": "asset_commented"
+        },
+        {
+            "category": "activity",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/87579-200.png",
+            "item_id": "842b8b90-9c92-478a-96d8-911e57ada7b6",
+            "label": "Asset returned",
+            "name": "asset_returned"
+        },
+        {
+            "category": "activitiy",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/87579-200.png",
+            "item_id": "94cf80da-9379-4721-9186-cf6f67c903e9",
+            "label": "User is inactive",
+            "name": "user_inactive"
+        },
+        {
+            "category": "issue",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/10890-200.png",
+            "item_id": "985fa881-b809-48ec-b46f-d951a500228b",
+            "label": "Asset threshold violation",
+            "name": "asset_violates_threshold"
+        },
+        {
+            "category": "activitiy",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/87579-200.png",
+            "item_id": "aedebedf-20c7-48ad-9a2e-b4cf5ddf320e",
+            "label": "User is active",
+            "name": "user_active"
+        },
+        {
+            "category": "admin",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/36251-200.png",
+            "item_id": "af12b1f0-c202-4a04-a982-78ed0c67eff7",
+            "label": "User removed",
+            "name": "user_removed"
+        },
+        {
+            "category": "activity",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/87579-200.png",
+            "item_id": "bfc83a84-50e6-4018-9bbd-55ce15a04256",
+            "label": "Asset in use",
+            "name": "asset_in_use"
+        },
+        {
+            "category": "issue",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/10890-200.png",
+            "item_id": "cfd82d9e-515c-4784-b693-ae70c557b5bc",
+            "label": "Asset issue is resolved",
+            "name": "asset_issue_resolved"
+        },
+        {
+            "category": "admin",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/93753-200.png",
+            "item_id": "d0965cd8-7e34-462f-8e52-469c8ce367f0",
+            "label": "User updated",
+            "name": "user_updated"
+        },
+        {
+            "category": "activity",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/87579-200.png",
+            "item_id": "e0b342ae-211a-41ec-a43f-9b83d88ee1d0",
+            "label": "Asset is inactive",
+            "name": "asset_inactive"
+        },
+        {
+            "category": "admin",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/43038-200.png",
+            "item_id": "f45cfe04-56ec-47cb-bd49-b957c2fcc815",
+            "label": "Asset updated",
+            "name": "asset_updated"
+        },
+        {
+            "category": "activity",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/1315098-200.png",
+            "item_id": "fcb41f6a-97d9-4073-b8c4-4d6d395090d8",
+            "label": "Asset Activated",
+            "name": "asset_active"
+        }
+    ],
+    "name": "alert_type",
+    "permissions": {
+        "Administrator": 1,
+        "Authenticated": 1
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "name",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "label",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "category",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "icon_path",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
