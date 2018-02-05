@@ -1,0 +1,14 @@
+{
+    "current_version": 68,
+    "dependencies": "clearblade,log",
+    "logging_enabled": "true",
+    "name": "getSummaryStatistics",
+    "params": [],
+    "permissions": {
+        "Administrator": 1,
+        "Anonymous": 1,
+        "Authenticated": 1
+    },
+    "run_user": "b48dfba50ba8bdf5ff9cf0c1ca4c",
+    "source": "getSummaryStatistics.js"
+}
