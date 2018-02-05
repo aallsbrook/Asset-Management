@@ -1,0 +1,15 @@
+{
+    "current_version": 226,
+    "dependencies": "clearblade,log",
+    "logging_enabled": "false",
+    "name": "simulate_asset_stream",
+    "params": [
+        "assetName",
+        "clearHistory"
+    ],
+    "permissions": {
+        "Administrator": 1
+    },
+    "run_user": "",
+    "source": "simulate_asset_stream.js"
+}
