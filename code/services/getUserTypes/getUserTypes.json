@@ -1,0 +1,10 @@
+{
+    "current_version": 4,
+    "dependencies": "clearblade",
+    "logging_enabled": "false",
+    "name": "getUserTypes",
+    "params": [],
+    "permissions": {},
+    "run_user": "",
+    "source": "getUserTypes.js"
+}
