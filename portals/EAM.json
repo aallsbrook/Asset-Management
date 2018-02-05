@@ -1,0 +1,2287 @@
+{
+    "config": {
+        "cols": {
+            "lg": 12,
+            "md": 10,
+            "sm": 6,
+            "xs": 4,
+            "xxs": 2
+        },
+        "currentBreakpointForFlyoutWidgets": "lg",
+        "currentBreakpointForPanes": "lg",
+        "currentBreakpointsForWidgets": {
+            "0e0ee95c-202d-49ac-8682-e475d277192d": "sm",
+            "159d5918-6fb4-49f6-87be-c95df7794970": "sm",
+            "204fc196-dc8c-4d34-8d03-b31d3beded8e": "lg",
+            "c7b98f33-77f7-456b-819d-6638ea6d40b7": "lg",
+            "cec8395d-793e-4214-aa80-70aef5f312e7": "xs",
+            "fdc9a775-b0f1-4279-ba9b-c987ae00f539": "lg"
+        },
+        "datasources": {
+            "0e196f99-1b7f-4ad2-84d7-c1eed66a808c": {
+                "id": "0e196f99-1b7f-4ad2-84d7-c1eed66a808c",
+                "name": "getLocations",
+                "settings": {
+                    "CALL_ON_LOAD": true,
+                    "SUPPRESS_DATASOURCE_ERRORS": false,
+                    "code_name": "getLocations",
+                    "payload": "{}",
+                    "refresh_interval": 0
+                },
+                "type": "CB_CODE_SERVICE"
+            },
+            "471bf7e6-e59d-4e73-afd1-6afa00c2af7b": {
+                "id": "471bf7e6-e59d-4e73-afd1-6afa00c2af7b",
+                "name": "mapDatasources",
+                "settings": {
+                    "datasources": [
+                        "cebc72b1-ba54-4c7c-ac7c-b20d38ec1f71",
+                        "d2a60f87-a315-4316-82a9-e6bff8ed8791",
+                        "0e196f99-1b7f-4ad2-84d7-c1eed66a808c",
+                        "9a60070a-1a08-49eb-b40f-a2c0730a29ba"
+                    ]
+                },
+                "type": "DATASOURCE_AGGREGATOR"
+            },
+            "4b43078e-1683-4476-8887-ab950cdca35f": {
+                "id": "4b43078e-1683-4476-8887-ab950cdca35f",
+                "name": "placeholder",
+                "settings": {},
+                "type": "LOCAL_DATASOURCE_PLUGIN"
+            },
+            "6c334428-df71-49cb-9739-87a2468789f4": {
+                "id": "6c334428-df71-49cb-9739-87a2468789f4",
+                "name": "assetStream",
+                "settings": {
+                    "CALL_ON_LOAD": true,
+                    "SUPPRESS_DATASOURCE_ERRORS": false,
+                    "TOPIC_NAME": "asset/status/+"
+                },
+                "type": "CB_MESSAGE_TOPIC"
+            },
+            "9a60070a-1a08-49eb-b40f-a2c0730a29ba": {
+                "id": "9a60070a-1a08-49eb-b40f-a2c0730a29ba",
+                "name": "realtimeAssetPositions",
+                "settings": {
+                    "CALL_ON_LOAD": false,
+                    "SUPPRESS_DATASOURCE_ERRORS": false,
+                    "TOPIC_NAME": "asset/position/+/+"
+                },
+                "type": "CB_MESSAGE_TOPIC"
+            },
+            "a4d29606-58c8-49a7-b352-6cd7096b0e42": {
+                "id": "a4d29606-58c8-49a7-b352-6cd7096b0e42",
+                "name": "getSummaryStatistics",
+                "settings": {
+                    "CALL_ON_LOAD": true,
+                    "SUPPRESS_DATASOURCE_ERRORS": false,
+                    "code_name": "getSummaryStatistics",
+                    "payload": "{}",
+                    "refresh_interval": 0
+                },
+                "type": "CB_CODE_SERVICE"
+            },
+            "a9d97ff6-ad9d-402f-ba76-3b7125580d86": {
+                "id": "a9d97ff6-ad9d-402f-ba76-3b7125580d86",
+                "name": "selectedDeviceRecentStream",
+                "settings": {},
+                "type": "LOCAL_DATASOURCE_PLUGIN"
+            },
+            "cebc72b1-ba54-4c7c-ac7c-b20d38ec1f71": {
+                "id": "cebc72b1-ba54-4c7c-ac7c-b20d38ec1f71",
+                "name": "getDevices",
+                "settings": {
+                    "CALL_ON_LOAD": true,
+                    "SUPPRESS_DATASOURCE_ERRORS": false,
+                    "refresh_interval": 10
+                },
+                "type": "CB_DEVICE_LIST"
+            },
+            "d2a60f87-a315-4316-82a9-e6bff8ed8791": {
+                "id": "d2a60f87-a315-4316-82a9-e6bff8ed8791",
+                "name": "selectedDevice",
+                "settings": {},
+                "type": "LOCAL_DATASOURCE_PLUGIN"
+            },
+            "ee45e318-1151-4b7b-8cc3-f09518d0c5dc": {
+                "id": "ee45e318-1151-4b7b-8cc3-f09518d0c5dc",
+                "name": "selectedDeviceAssetStream",
+                "settings": {
+                    "datasources": [
+                        "d2a60f87-a315-4316-82a9-e6bff8ed8791",
+                        "6c334428-df71-49cb-9739-87a2468789f4"
+                    ]
+                },
+                "type": "DATASOURCE_AGGREGATOR"
+            }
+        },
+        "externalScripts": [
+            {
+                "promise": {},
+                "shouldBlockAllWidgets": true,
+                "url": "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css"
+            },
+            {
+                "promise": {},
+                "shouldBlockAllWidgets": true,
+                "url": "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+            },
+            {
+                "promise": {},
+                "shouldBlockAllWidgets": false,
+                "url": "https://use.fontawesome.com/b95daa95a3.js"
+            }
+        ],
+        "flyoutWidgetLayout": {
+            "lg": [
+                {
+                    "h": 9,
+                    "i": "e6f6953f-4e6c-4e8f-8fe4-ad544c2fabb9",
+                    "minH": 3,
+                    "moved": false,
+                    "static": false,
+                    "w": 2,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 9,
+                    "i": "4d4b786b-2f4c-4f0d-8334-c9627d6d93c8",
+                    "minH": 3,
+                    "moved": false,
+                    "static": false,
+                    "w": 2,
+                    "x": 0,
+                    "y": 9
+                }
+            ],
+            "md": [],
+            "sm": [],
+            "xs": [
+                {
+                    "h": 35,
+                    "i": "e6f6953f-4e6c-4e8f-8fe4-ad544c2fabb9",
+                    "minH": 3,
+                    "moved": false,
+                    "static": false,
+                    "w": 4,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 17,
+                    "i": "4d4b786b-2f4c-4f0d-8334-c9627d6d93c8",
+                    "minH": 3,
+                    "moved": false,
+                    "static": false,
+                    "w": 4,
+                    "x": 0,
+                    "y": 35
+                }
+            ],
+            "xxs": [
+                {
+                    "h": 39,
+                    "i": "e6f6953f-4e6c-4e8f-8fe4-ad544c2fabb9",
+                    "minH": 3,
+                    "moved": false,
+                    "static": false,
+                    "w": 2,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 9,
+                    "i": "4d4b786b-2f4c-4f0d-8334-c9627d6d93c8",
+                    "minH": 3,
+                    "moved": false,
+                    "static": false,
+                    "w": 2,
+                    "x": 0,
+                    "y": 39
+                }
+            ]
+        },
+        "headerWidgetLayout": {
+            "lg": [
+                {
+                    "h": 1,
+                    "i": "brand",
+                    "moved": false,
+                    "static": false,
+                    "w": 42,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "title",
+                    "moved": false,
+                    "static": false,
+                    "w": 46,
+                    "x": 166,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "9f9aaae1-626d-4bf5-9485-f8dfff44ce75",
+                    "moved": false,
+                    "static": false,
+                    "w": 36,
+                    "x": 100,
+                    "y": 0
+                }
+            ],
+            "md": [
+                {
+                    "h": 1,
+                    "i": "brand",
+                    "moved": false,
+                    "static": false,
+                    "w": 36,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "title",
+                    "moved": false,
+                    "static": false,
+                    "w": 39,
+                    "x": 154,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "9f9aaae1-626d-4bf5-9485-f8dfff44ce75",
+                    "moved": false,
+                    "static": false,
+                    "w": 36,
+                    "x": 83,
+                    "y": 0
+                }
+            ],
+            "sm": [
+                {
+                    "h": 1,
+                    "i": "brand",
+                    "moved": false,
+                    "static": false,
+                    "w": 34,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "title",
+                    "moved": false,
+                    "static": false,
+                    "w": 37,
+                    "x": 117,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "9f9aaae1-626d-4bf5-9485-f8dfff44ce75",
+                    "moved": false,
+                    "static": false,
+                    "w": 36,
+                    "x": 64,
+                    "y": 0
+                }
+            ],
+            "xs": [
+                {
+                    "h": 1,
+                    "i": "brand",
+                    "moved": false,
+                    "static": false,
+                    "w": 28,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "title",
+                    "moved": false,
+                    "static": false,
+                    "w": 31,
+                    "x": 71,
+                    "y": 1
+                },
+                {
+                    "h": 1,
+                    "i": "9f9aaae1-626d-4bf5-9485-f8dfff44ce75",
+                    "moved": false,
+                    "static": false,
+                    "w": 36,
+                    "x": 40,
+                    "y": 0
+                }
+            ],
+            "xxs": [
+                {
+                    "h": 1,
+                    "i": "brand",
+                    "moved": false,
+                    "static": false,
+                    "w": 32,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "title",
+                    "moved": false,
+                    "static": false,
+                    "w": 33,
+                    "x": 47,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "i": "9f9aaae1-626d-4bf5-9485-f8dfff44ce75",
+                    "w": 36,
+                    "x": 27.5,
+                    "y": 0
+                }
+            ]
+        },
+        "pages": {
+            "Home": {
+                "children": [],
+                "defaultValue": "",
+                "href": "",
+                "id": "Home",
+                "isChild": false,
+                "isParam": false,
+                "name": "Home",
+                "path": ""
+            }
+        },
+        "paneGridWidgetLayouts": {
+            "0e0ee95c-202d-49ac-8682-e475d277192d": {
+                "lg": [
+                    {
+                        "h": 9,
+                        "i": "9a26afe3-7a0d-4815-b482-e8094f54dc7d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 9,
+                        "i": "59740537-3264-47e2-bd2b-62ac8d0d7b02",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 0,
+                        "y": 42
+                    },
+                    {
+                        "h": 8,
+                        "i": "fff820a5-113a-49ec-b422-21ab77cf30d7",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 4,
+                        "y": 26
+                    },
+                    {
+                        "h": 9,
+                        "i": "71ffee90-f45b-432e-869d-51330ac0cbc8",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 9
+                    },
+                    {
+                        "h": 8,
+                        "i": "8184612b-9cc3-4d9f-aa10-d37ea728525d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 4,
+                        "y": 34
+                    },
+                    {
+                        "h": 9,
+                        "i": "9a6647a0-7d26-4fcd-b167-b415eebd7fe2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 1,
+                        "y": 18
+                    },
+                    {
+                        "h": 6,
+                        "i": "fea43128-a577-4e12-a690-24997c908e55",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 5,
+                        "y": 20
+                    },
+                    {
+                        "h": 11,
+                        "i": "9465b569-a174-45dc-ba6d-8c36b765d496",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 5,
+                        "y": 9
+                    }
+                ],
+                "md": [],
+                "sm": [
+                    {
+                        "h": 10,
+                        "i": "9a26afe3-7a0d-4815-b482-e8094f54dc7d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 3,
+                        "i": "59740537-3264-47e2-bd2b-62ac8d0d7b02",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 3,
+                        "y": 0
+                    },
+                    {
+                        "h": 4,
+                        "i": "fff820a5-113a-49ec-b422-21ab77cf30d7",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 2,
+                        "y": 10
+                    },
+                    {
+                        "h": 5,
+                        "i": "71ffee90-f45b-432e-869d-51330ac0cbc8",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 0,
+                        "y": 10
+                    },
+                    {
+                        "h": 8,
+                        "i": "8184612b-9cc3-4d9f-aa10-d37ea728525d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 4,
+                        "y": 0
+                    },
+                    {
+                        "h": 8,
+                        "i": "9a6647a0-7d26-4fcd-b167-b415eebd7fe2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 4,
+                        "y": 8
+                    },
+                    {
+                        "h": 5,
+                        "i": "fea43128-a577-4e12-a690-24997c908e55",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 1,
+                        "y": 10
+                    },
+                    {
+                        "h": 13,
+                        "i": "9465b569-a174-45dc-ba6d-8c36b765d496",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 3,
+                        "y": 3
+                    }
+                ],
+                "xs": [
+                    {
+                        "h": 10,
+                        "i": "9a26afe3-7a0d-4815-b482-e8094f54dc7d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 3,
+                        "i": "59740537-3264-47e2-bd2b-62ac8d0d7b02",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 3,
+                        "y": 13
+                    },
+                    {
+                        "h": 4,
+                        "i": "fff820a5-113a-49ec-b422-21ab77cf30d7",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 2,
+                        "y": 10
+                    },
+                    {
+                        "h": 5,
+                        "i": "71ffee90-f45b-432e-869d-51330ac0cbc8",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 0,
+                        "y": 10
+                    },
+                    {
+                        "h": 8,
+                        "i": "8184612b-9cc3-4d9f-aa10-d37ea728525d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 2,
+                        "y": 16
+                    },
+                    {
+                        "h": 8,
+                        "i": "9a6647a0-7d26-4fcd-b167-b415eebd7fe2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 15
+                    },
+                    {
+                        "h": 5,
+                        "i": "fea43128-a577-4e12-a690-24997c908e55",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 1,
+                        "y": 10
+                    },
+                    {
+                        "h": 13,
+                        "i": "9465b569-a174-45dc-ba6d-8c36b765d496",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 3,
+                        "y": 0
+                    }
+                ],
+                "xxs": [
+                    {
+                        "h": 10,
+                        "i": "9a26afe3-7a0d-4815-b482-e8094f54dc7d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 3,
+                        "i": "59740537-3264-47e2-bd2b-62ac8d0d7b02",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 1,
+                        "y": 32
+                    },
+                    {
+                        "h": 4,
+                        "i": "fff820a5-113a-49ec-b422-21ab77cf30d7",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 1,
+                        "y": 23
+                    },
+                    {
+                        "h": 5,
+                        "i": "71ffee90-f45b-432e-869d-51330ac0cbc8",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 0,
+                        "y": 10
+                    },
+                    {
+                        "h": 8,
+                        "i": "8184612b-9cc3-4d9f-aa10-d37ea728525d",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 43
+                    },
+                    {
+                        "h": 8,
+                        "i": "9a6647a0-7d26-4fcd-b167-b415eebd7fe2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 35
+                    },
+                    {
+                        "h": 5,
+                        "i": "fea43128-a577-4e12-a690-24997c908e55",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 1,
+                        "y": 27
+                    },
+                    {
+                        "h": 13,
+                        "i": "9465b569-a174-45dc-ba6d-8c36b765d496",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 1,
+                        "y": 10
+                    }
+                ]
+            },
+            "159d5918-6fb4-49f6-87be-c95df7794970": {
+                "lg": [
+                    {
+                        "h": 9,
+                        "i": "9b154d90-db2e-40f7-853d-901453f02dc1",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 0,
+                        "y": 12
+                    },
+                    {
+                        "h": 12,
+                        "i": "d134b992-7dd3-4942-ab34-8d61a5f2ab22",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 3,
+                        "y": 0
+                    }
+                ],
+                "md": [],
+                "sm": [
+                    {
+                        "h": 7,
+                        "i": "9b154d90-db2e-40f7-853d-901453f02dc1",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 7,
+                        "i": "d134b992-7dd3-4942-ab34-8d61a5f2ab22",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 7
+                    }
+                ],
+                "xs": [
+                    {
+                        "h": 7,
+                        "i": "9b154d90-db2e-40f7-853d-901453f02dc1",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 7,
+                        "i": "d134b992-7dd3-4942-ab34-8d61a5f2ab22",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 7
+                    }
+                ],
+                "xxs": [
+                    {
+                        "h": 7,
+                        "i": "9b154d90-db2e-40f7-853d-901453f02dc1",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 7,
+                        "i": "d134b992-7dd3-4942-ab34-8d61a5f2ab22",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 7
+                    }
+                ]
+            },
+            "204fc196-dc8c-4d34-8d03-b31d3beded8e": {
+                "lg": [
+                    {
+                        "h": 9,
+                        "i": "f122b06b-a1ca-4dcb-ae6a-4c0f5f8a30ff",
+                        "minH": 3,
+                        "w": 1,
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "md": [],
+                "sm": [],
+                "xs": [],
+                "xxs": []
+            },
+            "c7b98f33-77f7-456b-819d-6638ea6d40b7": {
+                "lg": [
+                    {
+                        "h": 9,
+                        "i": "1a4918d4-7c0d-417d-be1c-b296e1cf36dd",
+                        "minH": 3,
+                        "w": 1,
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "md": [],
+                "sm": [],
+                "xs": [],
+                "xxs": []
+            },
+            "cec8395d-793e-4214-aa80-70aef5f312e7": {
+                "lg": [
+                    {
+                        "h": 9,
+                        "i": "7326f2c7-b804-4dd6-9c3b-9bce81ee14a2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 9,
+                        "i": "c29c161d-7332-4f83-8010-fbc84a1dc732",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 0,
+                        "y": 9
+                    }
+                ],
+                "md": [],
+                "sm": [
+                    {
+                        "h": 7,
+                        "i": "7326f2c7-b804-4dd6-9c3b-9bce81ee14a2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "h": 10,
+                        "i": "c29c161d-7332-4f83-8010-fbc84a1dc732",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "xs": [
+                    {
+                        "h": 12,
+                        "i": "7326f2c7-b804-4dd6-9c3b-9bce81ee14a2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 2,
+                        "y": 0
+                    },
+                    {
+                        "h": 13,
+                        "i": "c29c161d-7332-4f83-8010-fbc84a1dc732",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "xxs": [
+                    {
+                        "h": 11,
+                        "i": "7326f2c7-b804-4dd6-9c3b-9bce81ee14a2",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "h": 10,
+                        "i": "c29c161d-7332-4f83-8010-fbc84a1dc732",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 1,
+                        "x": 0,
+                        "y": 0
+                    }
+                ]
+            },
+            "fdc9a775-b0f1-4279-ba9b-c987ae00f539": {
+                "lg": [
+                    {
+                        "h": 9,
+                        "i": "b357389f-7b77-46c9-a603-c1b386341009",
+                        "minH": 3,
+                        "w": 3,
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "md": [],
+                "sm": [],
+                "xs": [],
+                "xxs": []
+            }
+        },
+        "paneLayouts": {
+            "Home": {
+                "lg": [
+                    {
+                        "h": 1,
+                        "i": "1343ca09-4347-4856-b253-3bba394e2413",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 5,
+                        "i": "e9210461-53b7-42f6-b14f-f07b0973002c",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "h": 2,
+                        "i": "24d513f2-7d6d-4ea4-95ea-82d46ff383ff",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 6,
+                        "y": 4
+                    },
+                    {
+                        "h": 2,
+                        "i": "b57a5e11-c424-4afc-9e5c-bcae41436821",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 6,
+                        "y": 0
+                    },
+                    {
+                        "h": 2,
+                        "i": "05f965b0-9f3e-4457-b567-13d04cdc96f3",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 6,
+                        "y": 2
+                    },
+                    {
+                        "h": 2,
+                        "i": "ca31dc71-d13b-47fc-bbe7-62bed8f2f240",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 10,
+                        "y": 2
+                    }
+                ],
+                "md": [
+                    {
+                        "h": 1,
+                        "i": "1343ca09-4347-4856-b253-3bba394e2413",
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 2,
+                        "y": 0
+                    },
+                    {
+                        "h": 5,
+                        "i": "e9210461-53b7-42f6-b14f-f07b0973002c",
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 0,
+                        "y": 6
+                    },
+                    {
+                        "h": 2,
+                        "i": "24d513f2-7d6d-4ea4-95ea-82d46ff383ff",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 3,
+                        "y": 11
+                    },
+                    {
+                        "h": 3,
+                        "i": "b57a5e11-c424-4afc-9e5c-bcae41436821",
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 2,
+                        "y": 3
+                    },
+                    {
+                        "h": 2,
+                        "i": "05f965b0-9f3e-4457-b567-13d04cdc96f3",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 2,
+                        "y": 1
+                    },
+                    {
+                        "h": 2,
+                        "i": "ca31dc71-d13b-47fc-bbe7-62bed8f2f240",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 6,
+                        "y": 1
+                    }
+                ],
+                "sm": [
+                    {
+                        "h": 1,
+                        "i": "1343ca09-4347-4856-b253-3bba394e2413",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 5,
+                        "i": "e9210461-53b7-42f6-b14f-f07b0973002c",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 6
+                    },
+                    {
+                        "h": 2,
+                        "i": "24d513f2-7d6d-4ea4-95ea-82d46ff383ff",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 11
+                    },
+                    {
+                        "h": 3,
+                        "i": "b57a5e11-c424-4afc-9e5c-bcae41436821",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 3
+                    },
+                    {
+                        "h": 2,
+                        "i": "05f965b0-9f3e-4457-b567-13d04cdc96f3",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "h": 2,
+                        "i": "ca31dc71-d13b-47fc-bbe7-62bed8f2f240",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 4,
+                        "y": 1
+                    }
+                ],
+                "xs": [
+                    {
+                        "h": 1,
+                        "i": "1343ca09-4347-4856-b253-3bba394e2413",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 5,
+                        "i": "e9210461-53b7-42f6-b14f-f07b0973002c",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 8
+                    },
+                    {
+                        "h": 2,
+                        "i": "24d513f2-7d6d-4ea4-95ea-82d46ff383ff",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 13
+                    },
+                    {
+                        "h": 3,
+                        "i": "b57a5e11-c424-4afc-9e5c-bcae41436821",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 5
+                    },
+                    {
+                        "h": 2,
+                        "i": "05f965b0-9f3e-4457-b567-13d04cdc96f3",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "h": 2,
+                        "i": "ca31dc71-d13b-47fc-bbe7-62bed8f2f240",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 3
+                    }
+                ],
+                "xxs": [
+                    {
+                        "h": 2,
+                        "i": "1343ca09-4347-4856-b253-3bba394e2413",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 5,
+                        "i": "e9210461-53b7-42f6-b14f-f07b0973002c",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 4
+                    },
+                    {
+                        "h": 2,
+                        "i": "24d513f2-7d6d-4ea4-95ea-82d46ff383ff",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 14
+                    },
+                    {
+                        "h": 3,
+                        "i": "b57a5e11-c424-4afc-9e5c-bcae41436821",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 11
+                    },
+                    {
+                        "h": 2,
+                        "i": "05f965b0-9f3e-4457-b567-13d04cdc96f3",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 2
+                    },
+                    {
+                        "h": 2,
+                        "i": "ca31dc71-d13b-47fc-bbe7-62bed8f2f240",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 9
+                    }
+                ]
+            }
+        },
+        "panes": {
+            "05f965b0-9f3e-4457-b567-13d04cdc96f3": {
+                "customPaneId": "",
+                "header": {
+                    "hide": false,
+                    "title": "Usage"
+                },
+                "hiddenBreakpoints": {},
+                "hideBorders": false,
+                "id": "05f965b0-9f3e-4457-b567-13d04cdc96f3",
+                "pageId": "Home",
+                "tabInfo": {
+                    "activeTab": "cec8395d-793e-4214-aa80-70aef5f312e7",
+                    "tabIds": [
+                        "cec8395d-793e-4214-aa80-70aef5f312e7"
+                    ],
+                    "tabTitles": {
+                        "cec8395d-793e-4214-aa80-70aef5f312e7": "DOUBLE CLICK"
+                    },
+                    "tabbed": false
+                },
+                "themeType": "secondary"
+            },
+            "1343ca09-4347-4856-b253-3bba394e2413": {
+                "customPaneId": "",
+                "header": {
+                    "hide": true,
+                    "title": ""
+                },
+                "hiddenBreakpoints": {},
+                "hideBorders": true,
+                "id": "1343ca09-4347-4856-b253-3bba394e2413",
+                "pageId": "Home",
+                "tabInfo": {
+                    "activeTab": "c7b98f33-77f7-456b-819d-6638ea6d40b7",
+                    "tabIds": [
+                        "c7b98f33-77f7-456b-819d-6638ea6d40b7"
+                    ],
+                    "tabTitles": {
+                        "c7b98f33-77f7-456b-819d-6638ea6d40b7": "DOUBLE CLICK"
+                    },
+                    "tabbed": false
+                },
+                "themeType": "secondary"
+            },
+            "24d513f2-7d6d-4ea4-95ea-82d46ff383ff": {
+                "customPaneId": "",
+                "header": {
+                    "hide": true,
+                    "title": "Historical"
+                },
+                "hiddenBreakpoints": {},
+                "hideBorders": true,
+                "id": "24d513f2-7d6d-4ea4-95ea-82d46ff383ff",
+                "pageId": "Home",
+                "tabInfo": {
+                    "activeTab": "159d5918-6fb4-49f6-87be-c95df7794970",
+                    "tabIds": [
+                        "159d5918-6fb4-49f6-87be-c95df7794970"
+                    ],
+                    "tabTitles": {
+                        "159d5918-6fb4-49f6-87be-c95df7794970": "DOUBLE CLICK"
+                    },
+                    "tabbed": false
+                },
+                "themeType": "secondary"
+            },
+            "b57a5e11-c424-4afc-9e5c-bcae41436821": {
+                "customPaneId": "overviewPane",
+                "header": {
+                    "hide": true,
+                    "title": ""
+                },
+                "hiddenBreakpoints": {},
+                "hideBorders": true,
+                "id": "b57a5e11-c424-4afc-9e5c-bcae41436821",
+                "pageId": "Home",
+                "tabInfo": {
+                    "activeTab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                    "tabIds": [
+                        "0e0ee95c-202d-49ac-8682-e475d277192d"
+                    ],
+                    "tabTitles": {
+                        "0e0ee95c-202d-49ac-8682-e475d277192d": "DOUBLE CLICK"
+                    },
+                    "tabbed": false
+                },
+                "themeType": "secondary"
+            },
+            "ca31dc71-d13b-47fc-bbe7-62bed8f2f240": {
+                "customPaneId": "",
+                "header": {
+                    "hide": false,
+                    "title": "Alerts"
+                },
+                "hiddenBreakpoints": {},
+                "hideBorders": false,
+                "id": "ca31dc71-d13b-47fc-bbe7-62bed8f2f240",
+                "pageId": "Home",
+                "tabInfo": {
+                    "activeTab": "fdc9a775-b0f1-4279-ba9b-c987ae00f539",
+                    "tabIds": [
+                        "fdc9a775-b0f1-4279-ba9b-c987ae00f539"
+                    ],
+                    "tabTitles": {
+                        "fdc9a775-b0f1-4279-ba9b-c987ae00f539": "DOUBLE CLICK"
+                    },
+                    "tabbed": false
+                },
+                "themeType": "secondary"
+            },
+            "e9210461-53b7-42f6-b14f-f07b0973002c": {
+                "customPaneId": "",
+                "header": {
+                    "hide": true,
+                    "title": ""
+                },
+                "hiddenBreakpoints": {},
+                "hideBorders": true,
+                "id": "e9210461-53b7-42f6-b14f-f07b0973002c",
+                "pageId": "Home",
+                "tabInfo": {
+                    "activeTab": "204fc196-dc8c-4d34-8d03-b31d3beded8e",
+                    "tabIds": [
+                        "204fc196-dc8c-4d34-8d03-b31d3beded8e"
+                    ],
+                    "tabTitles": {
+                        "204fc196-dc8c-4d34-8d03-b31d3beded8e": "DOUBLE CLICK"
+                    },
+                    "tabbed": false
+                },
+                "themeType": "secondary"
+            }
+        },
+        "savedPortalExists": true,
+        "theme": {
+            "graph": {
+                "four": "#ffc300",
+                "one": "#0585b6",
+                "three": "#fd0006",
+                "two": "#ff8500"
+            },
+            "info": {
+                "display_name": "Standard",
+                "name": "STANDARD_THEME"
+            },
+            "items": {
+                "main": {
+                    "header": {
+                        "burgerBars": {
+                            "fontColor": "#f5f5f5"
+                        },
+                        "dropdown": {
+                            "fontColor": "#f5f5f5",
+                            "fontFamily": "Helvetica",
+                            "fontSize": 18
+                        },
+                        "styles": {
+                            "backgroundColor": "#0c0000"
+                        }
+                    },
+                    "panes": {
+                        "flyout": {
+                            "body": {
+                                "backgroundColor": "#f5f5f5"
+                            },
+                            "header": {
+                                "backgroundColor": "#0c0000"
+                            }
+                        },
+                        "primary": {
+                            "body": {
+                                "backgroundColor": "#f5f5f5"
+                            },
+                            "header": {
+                                "backgroundColor": "#0c0000"
+                            },
+                            "tabs": {
+                                "activeTabUnderlineColor": "#0a0000",
+                                "backgroundColor": "#868080",
+                                "fontColor": "#dcdcdc"
+                            }
+                        },
+                        "secondary": {
+                            "body": {
+                                "backgroundColor": "#ffffff"
+                            },
+                            "header": {
+                                "backgroundColor": "#bdb8b8"
+                            },
+                            "tabs": {
+                                "activeTabUnderlineColor": "#0a0000",
+                                "backgroundColor": "#0c0000",
+                                "fontColor": "#dcdcdc"
+                            }
+                        }
+                    },
+                    "portal": {
+                        "styles": {
+                            "backgroundColor": "#ffffff"
+                        }
+                    },
+                    "widgets": {
+                        "BAR_CHART_WIDGET_COMPONENT": {
+                            "barColors": [
+                                {
+                                    "fill": "#0585b6"
+                                },
+                                {
+                                    "fill": "#ff8500"
+                                },
+                                {
+                                    "fill": "#fd0006"
+                                },
+                                {
+                                    "fill": "#ffc300"
+                                }
+                            ],
+                            "brushStroke": "#0c0000",
+                            "legendColor": "#000000"
+                        },
+                        "BUTTON_WIDGET_COMPONENT": {
+                            "backgroundColor": "#f5f5f5",
+                            "backgroundHoverColor": "#c2c2c2",
+                            "borderColor": "#cccccc",
+                            "fontColor": "#000000"
+                        },
+                        "GOOGLE_MAP_WIDGET_COMPONENT": {
+                            "mapTheme": ""
+                        },
+                        "LINE_CHART_WIDGET_COMPONENT": {
+                            "brushStroke": "#0c0000",
+                            "legendColor": "#000000",
+                            "lineColors": [
+                                {
+                                    "stroke": "#0585b6"
+                                },
+                                {
+                                    "stroke": "#ff8500"
+                                },
+                                {
+                                    "stroke": "#fd0006"
+                                },
+                                {
+                                    "stroke": "#ffc300"
+                                }
+                            ]
+                        },
+                        "LIST_WIDGET_COMPONENT": {
+                            "activeFontColor": "#dcdcdc",
+                            "activeItemBackgroundColor": "#0c0000",
+                            "fontColor": "#000000",
+                            "listItemBackgroundColor": "#ffffff",
+                            "titleColor": "#000000"
+                        },
+                        "PIE_CHART_WIDGET_COMPONENT": {
+                            "cells": [
+                                {
+                                    "fill": "#0585b6"
+                                },
+                                {
+                                    "fill": "#ff8500"
+                                },
+                                {
+                                    "fill": "#fd0006"
+                                },
+                                {
+                                    "fill": "#ffc300"
+                                }
+                            ]
+                        },
+                        "RADIAL_GAUGE_WIDGET_COMPONENT": {
+                            "backgroundColor": "#c2c2c2",
+                            "progressColor": "#0c0000"
+                        },
+                        "SPEEDOMETER_WIDGET": {
+                            "arrowColor": "#000000",
+                            "sectionColors": [
+                                {
+                                    "fill": "#0585b6"
+                                },
+                                {
+                                    "fill": "#ff8500"
+                                },
+                                {
+                                    "fill": "#fd0006"
+                                },
+                                {
+                                    "fill": "#ffc300"
+                                }
+                            ]
+                        },
+                        "TEXT_WIDGET_COMPONENT": {
+                            "fontColor": "#000000",
+                            "fontFamily": "Helvetica",
+                            "fontSize": 18
+                        },
+                        "TOGGLE_WIDGET": {
+                            "backgroundColor": "#c2c2c2",
+                            "fontColor": "#000000",
+                            "offColor": "#ffffff",
+                            "onColor": "#0c0000"
+                        }
+                    }
+                }
+            },
+            "palette": {
+                "darkPrimary": "#c2c2c2",
+                "darkSecondary": "#0a0000",
+                "defaultPrimary": "#f5f5f5",
+                "defaultSecondary": "#0c0000",
+                "lightPrimary": "#ffffff",
+                "lightSecondary": "#868080",
+                "primaryText": "#000000",
+                "secondaryText": "#dcdcdc"
+            }
+        },
+        "upgradesPerformed": {
+            "flyoutTitleUpgrade": true,
+            "headerBrandUpgrade": true,
+            "headerTitleUpgrade": true,
+            "widgetResizeUpgrade": true
+        },
+        "widgets": {
+            "1a4918d4-7c0d-417d-be1c-b296e1cf36dd": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "1a4918d4-7c0d-417d-be1c-b296e1cf36dd",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "0e196f99-1b7f-4ad2-84d7-c1eed66a808c",
+                        "incoming_parser": {
+                            "isDebugOn": true,
+                            "value": {
+                                "CSS": ".flex-container{\n     display:flex;\n     flex-wrap: wrap;\n     font-size:15px;\n}\n\n.flex-item{\n    width:160px;\n    flex-grow: 1;\n    padding-left:8px;\n    padding-right:8px;\n}\n.icon-text{\n    font-size:22px;\n    font-weight:bold;\n    padding:8px;\n}\n.subtext {\n    font-size:10px;\n}",
+                                "HTML": "\u003cdiv class=\"flex-container\"\u003e\n    \n        \u003cdiv class=\"flex-item\"\u003e\n            \u003ci class=\"fa fa-building fa-2x\" aria-hidden=\"true\"\u003e\u003c/i\u003e\n            \u003cspan id=\"locationCount\" class=\"icon-text\"\u003e0\u003c/span\u003eLocations\u003cbr\u003e\n            \u003cdiv class=\"subtext\"\u003eSelect a Location\u003c/div\u003e\n            \u003cselect id=\"locationSelect\" class=\"form-control\"\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\"flex-item\"\u003e\n            \u003ci class=\"fa fa-microchip fa-2x\" aria-hidden=\"true\"\u003e\u003c/i\u003e\n            \u003cspan id=\"deviceCount\" class=\"icon-text\"\u003e0\u003c/span\u003e Devices\u003cbr\u003e\n            \u003cdiv class=\"subtext\"\u003eFilter Device Types\u003c/div\u003e\n            \u003cselect id=\"deviceSelect\" class=\"form-control\"\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n    \n        \u003cdiv class=\"flex-item\"\u003e\n            \u003ci class=\"fa fa-male fa-2x\" aria-hidden=\"true\"\u003e\u003c/i\u003e\n            \u003cspan id=\"userCount\" class=\"icon-text\"\u003e0\u003c/span\u003eUsers\u003cbr\u003e\n            \u003cdiv class=\"subtext\"\u003eFind a User\u003c/div\u003e\n            \u003cselect id=\"userSelect\" class=\"form-control\"\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\"flex-item\"\u003e\n            \u003ci class=\"fa fa-exclamation-triangle fa-2x\" aria-hidden=\"true\"\u003e\u003c/i\u003e\n            \u003cspan id=\"issueCount\" class=\"icon-text\"\u003e0\u003c/span\u003eIssues\u003cbr\u003e\n            \u003cdiv class=\"subtext\"\u003eFilter Type\u003c/div\u003e\n            \u003cselect id=\"issueSelect\" class=\"form-control\"\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n \n\u003c/div\u003e\n",
+                                "JavaScript": "//JavaScript\nvar summaryStats = datasources.getSummaryStatistics.latestData();\nvar getDevices = datasources.getDevices.latestData();\n\n//helper function to build out options for a select from an array of objects\nfunction buildOptionsForSelect(arrayOfOptions, selectElementId, includeEmptyOption) {\n    var select = document.getElementById(selectElementId);\n    if (includeEmptyOption) {\n        select.add(document.createElement(\"option\"));\n    }\n    for (var x = 0; x \u003c arrayOfOptions.length; x++) {\n        var option = document.createElement(\"option\");\n        option.text = arrayOfOptions[x].name;\n        option.value = arrayOfOptions[x].value;\n        if (datasources.selectedDevice.name == arrayOfOptions[x].name) {\n            select.value = arrayOfOptions[x].value;\n        }\n        select.add(option);\n    }\n}\n\n\nif (this.datasource.success) {\n    var locations = this.datasource.results.DATA;\n    document.getElementById(\"locationCount\").innerHTML = locations.length;\n    var parsedLocations = [];\n    for (var x = 0; x \u003c locations.length; x++) {\n        var locObj = {\n            name: locations[x].label,\n            value: locations[x].name\n        };\n        parsedLocations.push(locObj);\n    }\n    buildOptionsForSelect(parsedLocations, \"locationSelect\", true);\n    var locationSelect = document.getElementById(\"locationSelect\");\n    locationSelect.addEventListener(\"change\", function(event) {\n        var locations = CB_PORTAL.portalModel.getDatasourceInstancesWithNameAsKey().getLocations.latestData().results.DATA;\n        var selectedLocation = null;\n        for (var x = 0; x \u003c locations.length; x++) {\n            if (locations[x].name === event.target.value) {\n                selectedLocation = locations[x];\n                break;\n            }\n        }\n        if (selectedLocation === null) {\n            window.showMapLayer(window.layersObj.allLocations);\n            //window.mapObj.fitBounds(window.layersObj.allLocations.getBounds());\n        } else {\n            if (Object.keys(window.layersObj.devicesPerLocation[selectedLocation.name]._layers).length \u003e 0) {\n                window.showMapLayer(window.layersObj.devicesPerLocation[selectedLocation.name]);\n            }\n            window.mapObj.setView([selectedLocation.latitude, selectedLocation.longitude], 13);\n        }\n    });\n    \n    var deviceSelect = document.getElementById(\"deviceSelect\");\n    deviceSelect.addEventListener(\"change\", function(event) {\n        if (event.target.value === \"\"){\n            datasources.selectedDevice.updateCallback({});\n            datasources.selectedDeviceRecentStream.updateCallback([]);\n            \n        } else {\n            for (var x = 0; x \u003c getDevices.length; x++) {\n                if (getDevices[x].name === event.target.value) {\n                    datasources.selectedDevice.updateCallback(getDevices[x]);\n                    datasources.selectedDeviceRecentStream.updateCallback([{\n                        \"pressure\": getDevices[x].pressure,\n                        \"rpm\": getDevices[x].rpm,\n                        \"suction\": getDevices[x].suction,\n                        \"voltage\": getDevices[x].voltage,\n                        \"amps\": getDevices[x].amps,\n                        \"timestamp\": new Date().toISOString()\n                    }]);\n                    break;\n                }\n            }\n        }\n    });\n}\n\nif (summaryStats.success) {\n    document.getElementById(\"deviceCount\").innerHTML = summaryStats.results.active_device_count + \"/\" + summaryStats.results.device_count;\n    document.getElementById(\"userCount\").innerHTML = summaryStats.results.user_count;\n    document.getElementById(\"issueCount\").innerHTML = summaryStats.results.issue_count;\n}\nif (getDevices.length \u003e 0) {\n    var parsedDevices = [];\n    for (var x = 0; x \u003c getDevices.length; x++) {\n        var devObj = {\n            name: getDevices[x].name,\n            value: getDevices[x].name\n        };\n        parsedDevices.push(devObj);\n    }\n    buildOptionsForSelect(parsedDevices, \"deviceSelect\", true);\n}\n\n"
+                            }
+                        }
+                    }
+                },
+                "tab": "c7b98f33-77f7-456b-819d-6638ea6d40b7",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "4d4b786b-2f4c-4f0d-8334-c9627d6d93c8": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "4d4b786b-2f4c-4f0d-8334-c9627d6d93c8",
+                "props": {
+                    "HAS_UNIQUE_STYLE": false,
+                    "activeFontColor": "#dcdcdc",
+                    "activeItemBackgroundColor": "#0c0000",
+                    "eventTarget": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "value": ""
+                    },
+                    "fontColor": "#000000",
+                    "listItemBackgroundColor": "#ffffff",
+                    "listSource": {
+                        "dataType": "CALCULATED_DATA_TYPE",
+                        "value": "\nreturn [{\"label\": \"Adminstration\", \"value\":{\"item_id\": \"admin\"}},\n    {\"label\": \"Devices\", \"value\":{\"item_id\": \"devices\"}},\n    {\"label\": \"Users\", \"value\":{\"item_id\": \"users\"}},\n    {\"label\": \"Rules\", \"value\":{\"item_id\": \"rules\"}},\n    {\"label\": \"Reports\", \"value\":{\"item_id\": \"reports\"}}];"
+                    },
+                    "listTitle": "Configuration",
+                    "titleColor": "#000000",
+                    "trackingColumnName": "item_id"
+                },
+                "tab": null,
+                "type": "LIST_WIDGET_COMPONENT"
+            },
+            "59740537-3264-47e2-bd2b-62ac8d0d7b02": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "59740537-3264-47e2-bd2b-62ac8d0d7b02",
+                "props": {
+                    "HAS_UNIQUE_STYLE": true,
+                    "backgroundColor": "#ff8500",
+                    "eventTarget": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "4b43078e-1683-4476-8887-ab950cdca35f",
+                        "outgoing_parser": {
+                            "isDebugOn": false,
+                            "value": "return this.widget;"
+                        }
+                    },
+                    "fontColor": "#000000",
+                    "offColor": "#ffffff",
+                    "offLabel": "Off",
+                    "onColor": "#0c0000",
+                    "onLabel": "On",
+                    "value": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "force_data": null,
+                        "value": "true"
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "TOGGLE_WIDGET"
+            },
+            "71ffee90-f45b-432e-869d-51330ac0cbc8": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "71ffee90-f45b-432e-869d-51330ac0cbc8",
+                "props": {
+                    "html": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "return this.datasource;"
+                        },
+                        "value": {
+                            "CSS": ".underline {\n  \n}\n",
+                            "HTML": "\u003cdiv class=\"text-center\"\u003e\n  \u003ch6 style=\"color:#024D69\"\u003eSustained Use\u003c/h6\u003e\n  \u003cspan style=\"font-size:44px\"\u003e44\u003c/span\u003e hrs\n\u003c/div\u003e\n",
+                            "JavaScript": "//JavaScript\n"
+                        }
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "7326f2c7-b804-4dd6-9c3b-9bce81ee14a2": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "7326f2c7-b804-4dd6-9c3b-9bce81ee14a2",
+                "props": {
+                    "HAS_UNIQUE_STYLE": true,
+                    "cells": [
+                        {
+                            "fill": "#0585b6"
+                        },
+                        {
+                            "fill": "#aaa8a6"
+                        },
+                        {
+                            "fill": "#fd0006"
+                        },
+                        {
+                            "fill": "#ffc300"
+                        }
+                    ],
+                    "chartData": {
+                        "dataType": "CALCULATED_DATA_TYPE",
+                        "value": "return [{\"name\": \"Aaron Allsbrook\", \"data\": 44},{\"name\": \"Idle\", \"data\": 400},{\"name\": \"Kristin Davis\", \"data\": 112},{\"name\": \"Sanket Deshpande\", \"data\": 6}];"
+                    },
+                    "chartMarginBottom": 20,
+                    "chartMarginLeft": 20,
+                    "chartMarginRight": 20,
+                    "chartMarginTop": 20,
+                    "innerRadius": 19,
+                    "showLabel": true,
+                    "showTooltip": true
+                },
+                "tab": "cec8395d-793e-4214-aa80-70aef5f312e7",
+                "type": "PIE_CHART_WIDGET_COMPONENT"
+            },
+            "8184612b-9cc3-4d9f-aa10-d37ea728525d": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "8184612b-9cc3-4d9f-aa10-d37ea728525d",
+                "props": {
+                    "HAS_UNIQUE_STYLE": true,
+                    "arrowColor": "#000000",
+                    "label": "RPM",
+                    "labelColor": "#024d69",
+                    "maxValue": 12000,
+                    "minValue": 0,
+                    "sectionColors": [
+                        {
+                            "fill": "#23b605"
+                        },
+                        {
+                            "fill": "#ffc300"
+                        },
+                        {
+                            "fill": "#ff8500"
+                        },
+                        {
+                            "fill": "#fd0006"
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "percentage": 50
+                        },
+                        {
+                            "percentage": 25
+                        },
+                        {
+                            "percentage": 20
+                        },
+                        {
+                            "percentage": 5
+                        }
+                    ],
+                    "value": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": null,
+                        "id": "ee45e318-1151-4b7b-8cc3-f09518d0c5dc",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "var stream = {};\n\nif (this.datasource.assetStream.length \u003e 0) {\n    stream = JSON.parse(this.datasource.assetStream);\n}\n\nif (!this.datasource.selectedDevice.name || this.datasource.selectedDevice.name === \"\") {\n    window.currentRpm = 0;\n} else {\n    if (!!stream.name \u0026\u0026 this.datasource.selectedDevice.name == stream.name) {\n        window.currentRpm = stream.rpm;\n    }\n}\n\nreturn window.currentRpm || 0;"
+                        }
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "SPEEDOMETER_WIDGET"
+            },
+            "9465b569-a174-45dc-ba6d-8c36b765d496": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "9465b569-a174-45dc-ba6d-8c36b765d496",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "d2a60f87-a315-4316-82a9-e6bff8ed8791",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": {
+                                "CSS": "",
+                                "HTML": "\n\u003cimg id=\"deviceImage\" style=\"height:140px\"\u003e",
+                                "JavaScript": "//JavaScript\nvar device = datasources[\"selectedDevice\"].latestData();\n\nif (jQuery.isEmptyObject(device)){\n    $('#deviceImage').hide();\n}else {\n    var desc = JSON.parse(device.description);\n    \n    $('#deviceImage').attr('src', desc.deviceImage);\n    $('#deviceImage').show();\n    \n\n}"
+                            }
+                        }
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "9a26afe3-7a0d-4815-b482-e8094f54dc7d": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "9a26afe3-7a0d-4815-b482-e8094f54dc7d",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "d2a60f87-a315-4316-82a9-e6bff8ed8791",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": {
+                                "CSS": "",
+                                "HTML": " \u003cdiv\u003e\n \u003cdiv id=\"noDeviceSelectedDiv\" style=\"display: flex;\"\u003e\n    \u003ch5\u003eNo Device selected. Please select a device from the device selection list.\u003c/h5\u003e\n\u003c/div\u003e\n \u003cdiv id=\"assetDetailsDiv\" style=\"display: flex;\"\u003e\n    \u003cdiv style=\"flex: 1;\"\u003e\n      \u003ch5\u003eName\u003c/h5\u003e\n      \u003cspan id=\"vendorDeviceName\"\u003e\u003c/span\u003e\n      \u003ch5\u003eVendor\u003c/h5\u003e\n      \u003cspan id=\"vendorName\"\u003e\u003c/span\u003e\n      \u003ch5\u003eModel\u003c/h5\u003e\n      \u003cspan id=\"vendorModel\"\u003e\u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv  style=\"flex: 1;\"\u003e\n      \u003ch5\u003eType\u003c/h5\u003e\n      \u003cspan id=\"vendorDeviceType\"\u003e\u003c/span\u003e\n      \u003ch5\u003eNum of Stages\u003c/h5\u003e\n      \u003cspan id=\"deviceNumStages\"\u003e\u003c/span\u003e\n      \u003ch5\u003ePhase\u003c/h5\u003e\n      \u003cspan id=\"deviceCurrentStage\"\u003e\u003c/span\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n",
+                                "JavaScript": "var device = datasources[\"selectedDevice\"].latestData();\n\nif (jQuery.isEmptyObject(device)){\n    $('#assetDetailsDiv').hide();\n    $('#noDeviceSelectedDiv').show();\n}else {\n    $('#noDeviceSelectedDiv').hide();\n    $('#assetDetailsDiv').show();\n    \n    var desc = JSON.parse(device.description);\n    if (!jQuery.isEmptyObject(desc)){\n        $('#vendorDeviceName').text(desc.vendorName);\n        $('#vendorName').text(desc.vendor);\n        $('#vendorModel').text(desc.model);\n        $('#vendorDeviceType').text(desc.vendorType);\n        $('#deviceNumStages').text(desc.numStages);\n        $('#deviceCurrentStage').text(desc.currentPhase);\n    }\n}"
+                            }
+                        }
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "9a6647a0-7d26-4fcd-b167-b415eebd7fe2": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "9a6647a0-7d26-4fcd-b167-b415eebd7fe2",
+                "props": {
+                    "HAS_UNIQUE_STYLE": true,
+                    "arrowColor": "#000000",
+                    "label": "Suction",
+                    "labelColor": "#024d69",
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "sectionColors": [
+                        {
+                            "fill": "#0585b6"
+                        },
+                        {
+                            "fill": "#44a2c6"
+                        },
+                        {
+                            "fill": "#ffc300"
+                        },
+                        {
+                            "fill": "#ff8500"
+                        },
+                        {
+                            "fill": "#fd0006"
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "label": "",
+                            "percentage": 20
+                        },
+                        {
+                            "label": "20",
+                            "percentage": 20
+                        },
+                        {
+                            "label": "40",
+                            "percentage": 20
+                        },
+                        {
+                            "label": "60",
+                            "percentage": 20
+                        },
+                        {
+                            "label": "80",
+                            "percentage": 20
+                        }
+                    ],
+                    "value": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "id": "ee45e318-1151-4b7b-8cc3-f09518d0c5dc",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "var stream = {};\n\nif (this.datasource.assetStream.length \u003e 0) {\n    stream = JSON.parse(this.datasource.assetStream);\n}\n\nif (!this.datasource.selectedDevice.name || this.datasource.selectedDevice.name === \"\") {\n    window.currentSuction = 0;\n} else {\n    if (!!stream.name \u0026\u0026 this.datasource.selectedDevice.name == stream.name) {\n        window.currentSuction = stream.suction;\n    }\n}\n\nreturn window.currentSuction || 0;"
+                        }
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "SPEEDOMETER_WIDGET"
+            },
+            "9b154d90-db2e-40f7-853d-901453f02dc1": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "9b154d90-db2e-40f7-853d-901453f02dc1",
+                "props": {
+                    "HAS_UNIQUE_STYLE": true,
+                    "brushStroke": "#0c0000",
+                    "chartData": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "id": "ee45e318-1151-4b7b-8cc3-f09518d0c5dc",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "//return this.datasource;\n\nreturn [{ \"pressure\": 61, \"rpm\": 50, \"suction\": 14, \"voltage\": 5, \"amps\": 5, \"timestamp\": \"2016-06-22T02:26:14.368Z\" }, { \"pressure\": 52, \"rpm\": 60, \"suction\": 8, \"voltage\": 6, \"amps\": 5, \"timestamp\": \"2016-06-23T02:27:41.112Z\" }, { \"pressure\": 73, \"rpm\": 70, \"suction\": 4, \"voltage\": 0, \"amps\": 5, \"timestamp\": \"2016-06-24T02:27:51.132Z\" }];"
+                        }
+                    },
+                    "chartMarginBottom": 0,
+                    "chartMarginLeft": 0,
+                    "chartMarginRight": 0,
+                    "chartMarginTop": 0,
+                    "legendColor": "#000000",
+                    "legendHorizontalAlign": "center",
+                    "legendLayout": "horizontal",
+                    "legendVerticalAlign": "bottom",
+                    "lineColors": [
+                        {
+                            "stroke": "#0585b6"
+                        },
+                        {
+                            "stroke": "#ff8500"
+                        },
+                        {
+                            "stroke": "#fd0006"
+                        },
+                        {
+                            "stroke": "#ffc300"
+                        },
+                        {
+                            "stroke": "#1ca218"
+                        }
+                    ],
+                    "lines": [
+                        {
+                            "dataKey": "pressure",
+                            "legendType": "line"
+                        },
+                        {
+                            "dataKey": "rpm",
+                            "legendType": "square"
+                        },
+                        {
+                            "dataKey": "suction",
+                            "legendType": "rect"
+                        },
+                        {
+                            "dataKey": "voltage",
+                            "legendType": "circle"
+                        },
+                        {
+                            "dataKey": "amps",
+                            "legendType": "cross",
+                            "name": "",
+                            "type": "monotone",
+                            "yAxisId": ""
+                        }
+                    ],
+                    "referenceLines": [],
+                    "showBrush": false,
+                    "showDots": true,
+                    "showGrid": true,
+                    "showHorizontalGrid": true,
+                    "showLegend": true,
+                    "showTooltip": true,
+                    "showVerticalGrid": true,
+                    "xAxisDataKey": "timestamp",
+                    "xAxisOrientation": "bottom",
+                    "xAxisPaddingLeft": 0,
+                    "xAxisPaddingRight": 0,
+                    "yAxes": [
+                        {
+                            "orientation": "left"
+                        }
+                    ]
+                },
+                "tab": "159d5918-6fb4-49f6-87be-c95df7794970",
+                "type": "LINE_CHART_WIDGET_COMPONENT"
+            },
+            "9f9aaae1-626d-4bf5-9485-f8dfff44ce75": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "9f9aaae1-626d-4bf5-9485-f8dfff44ce75",
+                "props": {
+                    "html": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "return this.datasource;"
+                        },
+                        "value": {
+                            "CSS": ".underline {\n  text-decoration: underline;\n}\n\n.hidden {\n    display: none;\n    height: 0px;\n}\n",
+                            "HTML": "\u003cdiv class=\"text-center underline\"\u003e\n\u003c/div\u003e\n",
+                            "JavaScript": "//JavaScript\n//we initially want to hide the device details pane, so we do it here. this js\n// will only be ran on initial portal load\nvar deviceDetailsPane = document.getElementById(\"portal-pane-deviceDetails\");\ndeviceDetailsPane.className += \" hidden\";"
+                        }
+                    }
+                },
+                "tab": null,
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "b357389f-7b77-46c9-a603-c1b386341009": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "b357389f-7b77-46c9-a603-c1b386341009",
+                "props": {
+                    "html": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "return this.datasource;"
+                        },
+                        "value": {
+                            "CSS": ".underline {\n  text-decoration: underline;\n}\n",
+                            "HTML": "\u003cdiv class=\"\"\u003e\n  \u003cdiv style=\"display:flex;font-size:12px;\"\u003e\n      \n      \u003ci class=\"fa fa-check fa-2x\"  style=\"color:green\" aria-hidden=\"true\"\u003e\u003c/i\u003e\n      \u003cdiv style=\"padding-right:4px; width:80px\"\u003eAsset returned to box\u003c/div\u003e\n      \u003cdiv style=\"padding-right:4px; width:100px\"\u003eJanuary 22,2018\u003c/div\u003e \n      \u003cdiv  style=\"color:green; width:120px\"\u003eText alert sent to Kristin\u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv style=\"display:flex;font-size:12px;\"\u003e\n      \n      \u003ci class=\"fa fa-close fa-2x\" style=\"color:red\" aria-hidden=\"true\"\u003e\u003c/i\u003e\n      \u003cdiv style=\"padding-right:4px; width:80px\"\u003eAsset inactive\u003c/div\u003e\n      \u003cdiv style=\"padding-right:4px; width:100px\"\u003eJanuary 3,2018\u003c/div\u003e \n      \u003cdiv  style=\"color:red; width:120px\"\u003eEmail alert sent to Aaron\u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv style=\"display:flex;font-size:12px;\"\u003e\n      \n      \u003ci class=\"fa fa-check fa-2x\"  style=\"color:green\" aria-hidden=\"true\"\u003e\u003c/i\u003e\n      \u003cdiv style=\"padding-right:4px; width:80px\"\u003eAsset assigned\u003c/div\u003e\n      \u003cdiv style=\"padding-right:4px; width:100px\"\u003eJanuary 3,2018\u003c/div\u003e \n      \u003cdiv  style=\"color:green; width:120px\"\u003eNo Action\u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n",
+                            "JavaScript": "//JavaScript\n"
+                        }
+                    }
+                },
+                "tab": "fdc9a775-b0f1-4279-ba9b-c987ae00f539",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "brand": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "brand",
+                "props": {
+                    "HAS_UNIQUE_STYLE": true,
+                    "fontColor": "#fff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 18,
+                    "textContent": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "value": ""
+                    }
+                },
+                "tab": "HEADER",
+                "type": "TEXT_WIDGET_COMPONENT"
+            },
+            "c29c161d-7332-4f83-8010-fbc84a1dc732": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "c29c161d-7332-4f83-8010-fbc84a1dc732",
+                "props": {
+                    "html": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "return this.datasource;"
+                        },
+                        "value": {
+                            "CSS": ".historyTable {\n    font-size:10px;\n    border-width:1px;\n    border-color: black;\n    border-style:solid;\n    border-radius:8px;\n}\n\n.historyCell{\n    border-top-width:0px;\n    border-left-width:0px;\n    border-right-width:0px;\n    border-bottom-width:1px;\n    border-color: black;\n    border-style:solid;\n    padding:8px;\n}",
+                            "HTML": "\u003c!--Current Status--\u003e\n\u003cdiv style=\"display:flex;padding:12px;\"\u003e\n    \n  \u003ch6 style=\"color:#024D69; padding-top:8px; padding-right:20px\"\u003eIdle\u003c/h6\u003e\n  \u003c!--\u003cdiv style=\"font-size:18px\"\u003eIdle\u003c/div\u003e--\u003e\n  \u003cbutton class=\"btn btn-info btn-xs\"\u003eCheck-out\u003c/button\u003e\n\u003c/div\u003e\n\u003ctable class=\"historyTable\"\u003e\n    \u003ctr\u003e\n        \u003cth class=\"historyCell\"\u003eAction\u003c/th\u003e\n        \u003cth class=\"historyCell\"\u003eUser\u003c/th\u003e\n        \u003cth class=\"historyCell\"\u003eTime\u003c/th\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd class=\"historyCell\"\u003eCheck-out\u003c/td\u003e\n        \u003ctd class=\"historyCell\"\u003eAaron Allsbrook\u003c/td\u003e\n        \u003ctd class=\"historyCell\"\u003eJan 23, 2018  3:56pm\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd class=\"historyCell\"\u003eCheck-in\u003c/td\u003e\n        \u003ctd class=\"historyCell\"\u003eKristin Davis\u003c/td\u003e\n        \u003ctd class=\"historyCell\"\u003eJan 18, 2018  9:41am\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd class=\"historyCell\"\u003eCheck-out\u003c/td\u003e\n        \u003ctd class=\"historyCell\"\u003eKristin Davis\u003c/td\u003e\n        \u003ctd class=\"historyCell\"\u003eJan 16, 2018  9:41am\u003c/td\u003e\n    \u003c/tr\u003e\n   \n\u003c/table\u003e\n More...",
+                            "JavaScript": "//JavaScript\n"
+                        }
+                    }
+                },
+                "tab": "cec8395d-793e-4214-aa80-70aef5f312e7",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "d134b992-7dd3-4942-ab34-8d61a5f2ab22": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "d134b992-7dd3-4942-ab34-8d61a5f2ab22",
+                "props": {
+                    "HAS_UNIQUE_STYLE": false,
+                    "barColors": [
+                        {
+                            "fill": "#0585b6"
+                        },
+                        {
+                            "fill": "#ff8500"
+                        },
+                        {
+                            "fill": "#fd0006"
+                        },
+                        {
+                            "fill": "#ffc300"
+                        }
+                    ],
+                    "bars": [
+                        {
+                            "dataKey": "uv"
+                        },
+                        {
+                            "dataKey": "pv"
+                        },
+                        {
+                            "dataKey": "av"
+                        },
+                        {
+                            "dataKey": "rv"
+                        }
+                    ],
+                    "brushStroke": "#0c0000",
+                    "chartData": {
+                        "dataType": "CALCULATED_DATA_TYPE",
+                        "value": "return [{ \"name\": \"Page A\", \"uv\": 4000, \"pv\": 2400, \"av\": 1400, \"rv\": 3000 }, { \"name\": \"Page B\", \"uv\": 3000, \"pv\": 1398, \"av\": 1400, \"rv\": 3000 }, { \"name\": \"Page C\", \"uv\": 2000, \"pv\": 9800, \"av\": 1400, \"rv\": 3000 }, { \"name\": \"Page D\", \"uv\": 2780, \"pv\": 3908, \"av\": 1400, \"rv\": 3000 }];"
+                    },
+                    "chartMarginBottom": 0,
+                    "chartMarginLeft": 0,
+                    "chartMarginRight": 0,
+                    "chartMarginTop": 0,
+                    "legendColor": "#000000",
+                    "legendHorizontalAlign": "center",
+                    "legendLayout": "horizontal",
+                    "legendVerticalAlign": "bottom",
+                    "referenceLines": [],
+                    "showBrush": false,
+                    "showGrid": true,
+                    "showHorizontalGrid": true,
+                    "showLegend": true,
+                    "showTooltip": true,
+                    "showVerticalGrid": true,
+                    "xAxisDataKey": "name",
+                    "xAxisOrientation": "bottom",
+                    "xAxisPaddingLeft": 0,
+                    "xAxisPaddingRight": 0,
+                    "yAxes": [
+                        {
+                            "orientation": "left"
+                        }
+                    ]
+                },
+                "tab": "159d5918-6fb4-49f6-87be-c95df7794970",
+                "type": "BAR_CHART_WIDGET_COMPONENT"
+            },
+            "e6f6953f-4e6c-4e8f-8fe4-ad544c2fabb9": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "e6f6953f-4e6c-4e8f-8fe4-ad544c2fabb9",
+                "props": {
+                    "HAS_UNIQUE_STYLE": false,
+                    "allowFilters": false,
+                    "allowSearch": true,
+                    "displayAttribute": "name",
+                    "eventTarget": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "d2a60f87-a315-4316-82a9-e6bff8ed8791",
+                        "outgoing_parser": {
+                            "isDebugOn": false,
+                            "value": "//need to make sure device details pane is unhidden, and hide the overview pane\n// var deviceDetailsPane = document.getElementById(\"portal-pane-deviceDetails\");\n// var overviewPane = document.getElementById(\"portal-pane-overviewPane\");\n\n// if (deviceDetailsPane.className.indexOf(\" hidden\") \u003e= 0) {\n//     deviceDetailsPane.className = deviceDetailsPane.className.replace(\" hidden\", \"\");\n// }\n// if (overviewPane.className.indexOf(\" hidden\") == -1) {\n//     // overviewPane.className += \" hidden\";\n// }\n\n//we also want to show the map layer for the selected devices location\nwindow.showMapLayer(window.layersObj.devicesPerLocation[this.widget.location_id]);\n\n//Update the device select dropdown\nvar devSelect = document.getElementById(\"deviceSelect\")\ndevSelect.value = this.widget.name;\n\nif (\"createEvent\" in document) {\n    var evt = document.createEvent(\"HTMLEvents\");\n    evt.initEvent(\"change\", false, true);\n    devSelect.dispatchEvent(evt);\n}\nelse {\n    devSelect.fireEvent(\"onchange\");\n}\n\nreturn this.widget;"
+                        }
+                    },
+                    "listSource": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "DYNAMIC_DATA_TYPE",
+                            "STATIC_DATA_TYPE"
+                        ],
+                        "id": "cebc72b1-ba54-4c7c-ac7c-b20d38ec1f71",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "var inactivePeriod = 900000 //represent 15 minutes\nfor(var i=0;i\u003cthis.datasource.length; i++){\n    var lastactive = this.datasource[i].last_active_date;\n    lastactive = lastactive*1000;\n    var current = new Date().getTime();\n    if ( (current - lastactive) \u003c inactivePeriod) {\n        // device is active\n       this.datasource[i].isActive = true;\n    }\n}\nreturn this.datasource;"
+                        }
+                    },
+                    "listTitle": "Devices",
+                    "statusAttribute": "isActive"
+                },
+                "tab": null,
+                "type": "FILTERABLE_LIST_WIDGET_COMPONENT"
+            },
+            "f122b06b-a1ca-4dcb-ae6a-4c0f5f8a30ff": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "f122b06b-a1ca-4dcb-ae6a-4c0f5f8a30ff",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "471bf7e6-e59d-4e73-afd1-6afa00c2af7b",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": {
+                                "CSS": ".underline {\n  text-decoration: underline;\n}\n\n#map {\n    position:absolute;\n    top:0;\n    bottom:0;\n    width:100%;\n}",
+                                "HTML": "\u003cdiv id='map' class=\"rounded\"\u003e\u003c/div\u003e\n",
+                                "JavaScript": "//JavaScript\n\n//start initialization related things - everything in this section should only be ran on initial load\nif (window.mapObj === undefined) {\n    L.mapbox.accessToken = 'pk.eyJ1IjoicnJlaW5vbGQiLCJhIjoiY2lwOTllOGQ2MDB4Y2VhbnJnMWtzcW9qaiJ9.1mNTDQ5rwabgUL9onzaLxg';\n    window.mapObj = L.mapbox.map('map', 'mapbox.streets').setView([40, -74.50], 9);\n}\n\n//first the layers\nif (window.layersObj === undefined) {\n    window.layersObj = {};\n}\n\n// start device per location layer - these layers will be filled with markers in a bit\nif (window.layersObj.devicesPerLocation === undefined) {\n    window.layersObj.devicesPerLocation = {};\n    //loop through each location and create an empty layer for it and save the reference for later\n    if (this.datasource.getLocations.success) {\n        var locations = this.datasource.getLocations.results.DATA;\n        for (var x = 0; x \u003c locations.length; x++) {\n            window.layersObj.devicesPerLocation[locations[x].name] = L.mapbox.featureLayer();\n        }\n    } else {\n        console.log('getLocations was not successful, unable to create layers for devices per location');\n    }\n}\n// end device per location layer\n\n// start allLocations layer - won't use markers since these won't ever move\nif (window.layersObj.allLocations === undefined) {\n    if (this.datasource.getLocations.success) {\n        var locations = this.datasource.getLocations.results.DATA;\n        var geojson = [];\n        for (var x = 0; x \u003c locations.length; x++) {\n            var geojsonobj = {\n                type: 'Feature',\n                geometry: {\n                    type: 'Point',\n                    coordinates: [locations[x].longitude, locations[x].latitude]\n                },\n                properties: {\n                    \"marker-color\": \"#000000\",\n                    \"marker-size\": \"medium\",\n                    \"marker-symbol\": \"l\",\n                    title: locations[x].label,\n                    description: locations[x].address\n                }\n            };\n            geojson.push(geojsonobj);\n        }\n        window.layersObj.allLocations = L.mapbox.featureLayer().setGeoJSON(geojson);\n    }\n}\n// end allLocations layer\n\n//done with the layers\n\n//now create the markers as needed\nif (window.markersObj === undefined) {\n    window.markersObj = {};\n}\n\n// start byLocation markers obj creation\nif (window.markersObj.byLocation === undefined) {\n    window.markersObj.byLocation = {};\n    if (this.datasource.getLocations.success) {\n        var locations = this.datasource.getLocations.results.DATA;\n        for (var x = 0; x \u003c locations.length; x++) {\n            window.markersObj.byLocation[locations[x].name] = {};\n        }\n        //now we get all devices, and create a marker for each and add to the correct location\n        var devices = this.datasource.getDevices;\n        for (var y = 0; y \u003c devices.length; y++) {\n            window.markersObj.byLocation[devices[y].location_id][devices[y].name] = L.marker([devices[y].latitude, devices[y].longitude], {\n                icon: L.mapbox.marker.icon({\n                    'marker-color': \"#ffffff\",\n                    'marker-symbol': 'd'\n                })\n            }).addTo(window.layersObj.devicesPerLocation[devices[y].location_id]);\n        }\n        //that is it for now\n    }\n}\n\n//done creating markers\n\n//add some helper functions for showing/hiding layers\nif (window.showMapLayer === undefined) {\n    window.showMapLayer = function (layerObj) {\n        //hide all other layers - probably a better way to do this in the future.\n        //hide allLocations first\n        if (window.mapObj.hasLayer(window.layersObj.allLocations)) {\n            window.mapObj.removeLayer(window.layersObj.allLocations);\n        }\n        //no loop through each device by location layer and hide it\n        for (var loc in window.layersObj.devicesPerLocation) {\n            if (window.layersObj.devicesPerLocation.hasOwnProperty(loc)) {\n                if (window.mapObj.hasLayer(window.layersObj.devicesPerLocation[loc])) {\n                    window.mapObj.removeLayer(window.layersObj.devicesPerLocation[loc]);\n                }\n            }\n        }\n        layerObj.addTo(window.mapObj);\n        window.mapObj.fitBounds(layerObj.getBounds());\n    }\n}\n\n//show allLocations layer by default\nif (window.initialMapParserLoaded === undefined \u0026\u0026 !window.initialMapParserLoaded) {\n    window.initialMapParserLoaded = true;\n}\n\n// If a location has already been selected, display it.\nvar locSelect = document.getElementById(\"locationSelect\");\nvar selectedLocation = !!locSelect ? locSelect.value : \"\";\nif (selectedLocation !== \"\") {\n    window.layersObj.devicesPerLocation[selectedLocation].addTo(window.mapObj);\n} else {\n    window.showMapLayer(window.layersObj.allLocations);\n}\n\n\n// end initialization\n\nif (window.lastRealtimeAssetPositions === undefined) {\n    window.lastRealtimeAssetPositions = this.datasource.realtimeAssetPositions;\n} else {\n    if (window.lastRealtimeAssetPositions !== this.datasource.realtimeAssetPositions) {\n        window.lastRealtimeAssetPositions = this.datasource.realtimeAssetPositions;\n        var parsedPosition = JSON.parse(window.lastRealtimeAssetPositions);\n        window.markersObj.byLocation[parsedPosition.location][parsedPosition.device_name].setLatLng(L.latLng(parsedPosition.latitude, parsedPosition.longitude));\n    }\n}"
+                            }
+                        }
+                    }
+                },
+                "tab": "204fc196-dc8c-4d34-8d03-b31d3beded8e",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "fea43128-a577-4e12-a690-24997c908e55": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "fea43128-a577-4e12-a690-24997c908e55",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "ee45e318-1151-4b7b-8cc3-f09518d0c5dc",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": {
+                                "CSS": "\n",
+                                "HTML": "\n\n\u003cdiv class=\"text-center\"\u003e\n  \u003ch6 style=\"color:#024D69\"\u003eAMPs\u003c/h6\u003e\n  \u003cspan id=\"ampsValue\" style=\"font-size:44px\"\u003e0\u003c/span\u003e mA\n\u003c/div\u003e\n",
+                                "JavaScript": "//JavaScript\nvar stream = {};\n\nif (this.datasource.assetStream.length \u003e 0) {\n    stream = JSON.parse(this.datasource.assetStream);\n}\n\nif (this.datasource.selectedDevice.name || this.datasource.selectedDevice.name !== \"\") {\n    if (!!stream.name \u0026\u0026 this.datasource.selectedDevice.name == stream.name) {\n        var domElement = document.getElementById(\"ampsValue\")\n\n        if (domElement.innerText) {\n            domElement.innerText = stream.amps;\n        }\n        else if (domElement.textContent) {\n            domElement.textContent = stream.amps;   \n        }\n    }\n}\n"
+                            }
+                        }
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "fff820a5-113a-49ec-b422-21ab77cf30d7": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "fff820a5-113a-49ec-b422-21ab77cf30d7",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "ee45e318-1151-4b7b-8cc3-f09518d0c5dc",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": {
+                                "CSS": "\n",
+                                "HTML": "\n\u003cdiv class=\"text-center\"\u003e\n  \u003ch6 style=\"color:#024D69\"\u003eVoltage\u003c/h6\u003e\n  \u003cspan id=\"voltsValue\" style=\"font-size:44px\"\u003e0\u003c/span\u003e v\n\u003c/div\u003e\n",
+                                "JavaScript": "//JavaScript\nvar stream = {};\n\nif (this.datasource.assetStream.length \u003e 0) {\n    stream = JSON.parse(this.datasource.assetStream);\n}\n\nif (this.datasource.selectedDevice.name \u0026\u0026 this.datasource.selectedDevice.name !== \"\") {\n    if (stream.name \u0026\u0026 this.datasource.selectedDevice.name === stream.name) {\n        var domElement = document.getElementById(\"voltsValue\");\n\n        if (domElement.innerText) {\n            domElement.innerText = stream.voltage;\n        }\n        else if (domElement.textContent) {\n            domElement.textContent = stream.voltage;   \n        }\n    }\n}"
+                            }
+                        }
+                    }
+                },
+                "tab": "0e0ee95c-202d-49ac-8682-e475d277192d",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
+            "flyoutTitle": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "flyoutTitle",
+                "props": {
+                    "HAS_UNIQUE_STYLE": true,
+                    "fontColor": "#fff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 30,
+                    "textContent": {
+                        "dataType": "CALCULATED_DATA_TYPE",
+                        "value": "return \"Menu\""
+                    }
+                },
+                "type": "TEXT_WIDGET_COMPONENT"
+            },
+            "title": {
+                "externalScripts": [
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css",
+                    "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"
+                ],
+                "id": "title",
+                "props": {
+                    "html": {
+                        "dataType": "STATIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": "return this.datasource;"
+                        },
+                        "value": {
+                            "CSS": ".logo_image {\n  height:30px;\n}\n\n.title_text {\n    color:white;\n    font-size:20px;\n    padding-right:120px;\n}\n\n",
+                            "HTML": "\u003cdiv class=\"text-center\"\u003e\n    \u003cspan class=\"title_text\"\u003e Field Asset Management \u003c/span\u003e\n    \u003cimg class = \"logo_image\" src=\"https://www.clearblade.com/hubfs/cb-logo-13.svg?t=1515787344954\"\u003e\n  \u003cimg class = \"logo_image\" src=\"http://www.amd.com/themes/custom/amd/images/logo_white.svg\"\u003e\n\u003c/div\u003e\n",
+                            "JavaScript": "//JavaScript\n"
+                        }
+                    }
+                },
+                "tab": "HEADER",
+                "type": "HTML_WIDGET_COMPONENT"
+            }
+        }
+    },
+    "description": null,
+    "last_updated": "05 Feb 18 17:06 UTC",
+    "name": "EAM",
+    "system_key": "f8e7d1a50bdc8681f8f09dc6b413",
+    "type": "v2"
+}
