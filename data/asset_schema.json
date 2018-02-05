@@ -1,0 +1,44 @@
+{
+    "app_id": "f8e7d1a50bdc8681f8f09dc6b413",
+    "collection_id": "b0f5d1a50bf88b9de8baa7aefa56",
+    "items": [
+        {
+            "custom_attributes": "[{\"name\":\"rated_HP\", \"label\":\" Rated HP\". \"type\":\"string\"},{\"name\":\"max_torque\", \"label\":\" Max Torque\", \"type\":\"int\"}]",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/105182-200.png",
+            "item_id": "7f093c61-86b6-47ca-8293-c54cb0bc274d",
+            "type": "Forklift"
+        },
+        {
+            "custom_attributes": "[{\"name\":\"HP\", \"label\":\"Horse power\", \"type\":\"int\"},{\"name\":\"phase\", \"label\":\" Phase\", \"type\":\"int\"}]",
+            "icon_path": "https://d30y9cdsu7xlg0.cloudfront.net/png/121097-200.png",
+            "item_id": "fcb2666b-784b-4cae-b4b4-a75dbd872e60",
+            "type": "Coolant Pump"
+        }
+    ],
+    "name": "asset_schema",
+    "permissions": {
+        "Authenticated": 1
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "type",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "icon_path",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "custom_attributes",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
