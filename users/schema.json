@@ -1,0 +1,22 @@
+{
+    "columns": [
+        {
+            "ColumnName": "user_type",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "active",
+            "ColumnType": "bool",
+            "PK": false
+        },
+        {
+            "ColumnName": "last_active_date",
+            "ColumnType": "int",
+            "PK": false
+        }
+    ],
+    "permissions": {
+        "Administrator": 1
+    }
+}
