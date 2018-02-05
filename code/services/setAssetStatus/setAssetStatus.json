@@ -1,0 +1,10 @@
+{
+    "current_version": 7,
+    "dependencies": "clearblade,log",
+    "logging_enabled": "false",
+    "name": "setAssetStatus",
+    "params": [],
+    "permissions": {},
+    "run_user": "",
+    "source": "setAssetStatus.js"
+}
