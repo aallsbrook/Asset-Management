@@ -1,0 +1,84 @@
+{
+    "columns": [
+        {
+            "ColumnName": "latitude",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "longitude",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "altitude",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "location_id",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "location_x",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "location_y",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "location_z",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "custom",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "temperature",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "pressure",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "rpm",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "suction",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "voltage",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "amps",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "vibration",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "acceleration",
+            "ColumnType": "float",
+            "PK": false
+        }
+    ]
+}
